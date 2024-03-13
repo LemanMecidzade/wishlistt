@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WishList</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f2324461fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="search">
+            <i class="fa-solid fa-arrow-left"></i>
+            <a href="">Back to search</a>
+        </div>
+        <div class="logo">
+            <img src="https://www.holidayhomes.com/assets/logo/logo.svg" alt="" width="90">
+        </div>
+    </nav>
+    <hr>
+    <section>
+        <div class="info">
+            <h1>Wishlists</h1>
+            <h4>You don't have any wishlists yet</h4>
+            <span>It's empty here. Add a new wishlist above, or click on the heart icon to save homes you like.</span>
+        </div>
+        <div class="btn">
+            <button onclick="openModal()">Add wishlist</button>
+        </div>
+        <div id="overlay"></div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Name Your Wishlist</h2>
+                <hr>
+                <input type="text" id="wishlistName" placeholder="Wishlist name" required>
+                <hr>
+                <div class="btn-container">
+                    <button onclick="cancel()">Cancel</button>
+                    <button onclick="createWishlist()">Continue</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="wishlistContainer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
